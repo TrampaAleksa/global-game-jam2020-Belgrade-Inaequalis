@@ -12,7 +12,18 @@ public class proba : MonoBehaviour
     
     void Update()
     {
-        if(Input.GetKeyDown("k"))
+        if(Input.GetKey("h")){
             audioManager.PlaySound("hammer");
+            
+        }
+        if(Input.GetKey("j")){
+            
+            audioManager.StopSound("hammer");
+            
+        }
+        if(Input.GetKey("k")){
+            
+            audioManager.LoopSound("hammer",true);
+        }
     }
 }
