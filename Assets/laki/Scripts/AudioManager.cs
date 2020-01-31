@@ -24,6 +24,7 @@ public class AudioManager : MonoBehaviour
 
     void Start()
     {
+        
         int i = 0;
         AudioSource[] audioSource = new AudioSource[audioArray.Length];
         foreach (Audio audio in audioArray)
