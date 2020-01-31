@@ -13,11 +13,16 @@ public class Timer : MonoBehaviour
     public GameObject go;
     public int minutes;
     public int sec;
-    
+    private bool triggerAlert=true;
     bool tmp;
     int totalSeconds = 0;
     int TOTAL_SECONDS = 0;
     float fillamount;
+    public bool OnStart()
+    {
+        AudioManager.Instance.PlaySound("startOfDaySound");
+        return false;        
+    }
     public bool TimerClock()
     {
         if (sec > 0)
@@ -34,12 +39,16 @@ public class Timer : MonoBehaviour
     {
         if(TimerAlert())
         {
+            if(triggerAlert){
+                triggerAlert=false;
+                AudioManager.Instance.PlaySound("endOfDayBell");
+            }
             if(tmp){
-                go.transform.position+= new Vector3(2,0,0);
+                go.transform.position+= new Vector3(0.5f,0,0);
                 tmp=false;
             }
             else {
-                go.transform.position-= new Vector3(2,0,0);
+                go.transform.position-= new Vector3(0.5f,0,0);
                 tmp=true;
             }
         }
@@ -48,6 +57,8 @@ public class Timer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        LoopsHandler.LoopDelegate onStartDelegate = OnStart;
+        LoopsHandler.Instance.Loop(0.001f, OnStart);
         tmp=true;
         if (minutes > 0)
             totalSeconds += minutes * 60;
