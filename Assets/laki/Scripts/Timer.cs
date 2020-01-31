@@ -13,6 +13,7 @@ public class Timer : MonoBehaviour
     public GameObject go;
     public int minutes;
     public int sec;
+    
     bool tmp;
     int totalSeconds = 0;
     int TOTAL_SECONDS = 0;
@@ -31,14 +32,14 @@ public class Timer : MonoBehaviour
     }
     public bool Shake()
     {
-        if(sec<15 && minutes==0)
+        if(TimerAlert())
         {
             if(tmp){
-                go.transform.position+= new Vector3(1,0,0);
+                go.transform.position+= new Vector3(2,0,0);
                 tmp=false;
             }
             else {
-                go.transform.position-= new Vector3(1,0,0);
+                go.transform.position-= new Vector3(2,0,0);
                 tmp=true;
             }
         }
@@ -71,5 +72,13 @@ public class Timer : MonoBehaviour
             return false;
         }
         else return true;        
+    }
+    public bool TimerAlert()
+    {
+        if(sec<=8 && minutes==0)
+        {
+            return true;
+        }
+        else return false;
     }
 }
