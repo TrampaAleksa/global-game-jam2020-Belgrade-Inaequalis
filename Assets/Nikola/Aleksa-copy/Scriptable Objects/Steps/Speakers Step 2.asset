@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05f7651ca01ee3342a01758b7b8efa4f, type: 3}
   m_Name: Speakers Step 2
   m_EditorClassIdentifier: 
-  stepObjects: []
+  stepObjects:
+  - {fileID: 2946029707939458658, guid: d96829cb59fe6c846bc562134ba31d82, type: 3}
+  - {fileID: 5848278926571933870, guid: cddb6e0b1ae31884a8fc2650f0a958d0, type: 3}
   currentStepObjectIndex: 0
   isFinished: 0

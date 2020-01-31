@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05f7651ca01ee3342a01758b7b8efa4f, type: 3}
   m_Name: Telephone Step 3
   m_EditorClassIdentifier: 
-  stepObjects: []
+  stepObjects:
+  - {fileID: 698228220403207817, guid: eca39e07c5af8ce41bab8af9536c6397, type: 3}
+  - {fileID: 7378280876153038053, guid: 19813bca0b9859a4e95556ec2076f681, type: 3}
+  - {fileID: 4941600190514693763, guid: 9fe8de145ea976d42b13457261b0d5fe, type: 3}
   currentStepObjectIndex: 0
   isFinished: 0

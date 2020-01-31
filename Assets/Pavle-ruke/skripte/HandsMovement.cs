@@ -11,6 +11,7 @@ public class HandsMovement : MonoBehaviour
     public float handsSpeed=10f;
     Vector2 movement1;
     Vector2 movement2;
+    
 
     //to do later ---> inicijalizovati sa private
 

@@ -15,6 +15,6 @@ MonoBehaviour:
   partToRepair: {fileID: 4941600190514693763, guid: 505877692af4be140b8c8b0ad2b803c2,
     type: 3}
   recipeTitle: Telephone
-  firstStep: {fileID: 0}
-  secondStep: {fileID: 0}
-  ThirdStep: {fileID: 0}
+  firstStep: {fileID: 11400000, guid: 482dcb441da007744a5df7567caa5f70, type: 2}
+  secondStep: {fileID: 11400000, guid: 378052abd1204af408f54ddd3b5323b7, type: 2}
+  ThirdStep: {fileID: 11400000, guid: f81ddf69e8f923f4e997a1f369a6fa26, type: 2}

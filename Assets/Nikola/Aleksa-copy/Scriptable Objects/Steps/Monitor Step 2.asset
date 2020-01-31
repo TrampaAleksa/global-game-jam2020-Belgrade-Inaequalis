@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05f7651ca01ee3342a01758b7b8efa4f, type: 3}
   m_Name: Monitor Step 2
   m_EditorClassIdentifier: 
-  stepObjects: []
+  stepObjects:
+  - {fileID: 7965039129781338026, guid: cae4f5386d4e1ed47afcbcd16ff948e2, type: 3}
+  - {fileID: 5856557280469390159, guid: c181516fb3baab849a1d141f1cd94337, type: 3}
   currentStepObjectIndex: 0
   isFinished: 0

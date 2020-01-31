@@ -10,8 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 05f7651ca01ee3342a01758b7b8efa4f, type: 3}
-  m_Name: Camera step 1
+  m_Name: Camera Step 1
   m_EditorClassIdentifier: 
-  stepObjects: []
+  stepObjects:
+  - {fileID: 7378280876153038053, guid: 19813bca0b9859a4e95556ec2076f681, type: 3}
+  - {fileID: 698228220403207817, guid: eca39e07c5af8ce41bab8af9536c6397, type: 3}
+  - {fileID: 5820710179873963980, guid: 3f7ef34d69a9e404daf2585dab57857c, type: 3}
   currentStepObjectIndex: 0
   isFinished: 0
