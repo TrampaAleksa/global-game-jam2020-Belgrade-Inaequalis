@@ -32,6 +32,7 @@ public class HandGrab : MonoBehaviour
         Debug.DrawRay(raycastObject.transform.position, fwd * 20, Color.green);
         if (objectHit.collider!=null)
         {
+            AudioManager.Instance.PlaySound("pickEffect");
             GameObject objectPickedUp = objectHit.collider.gameObject;
             positionWhenPickedUp = objectPickedUp.transform.position;
             objectPickedUp.transform.parent = gameObject.transform;
@@ -47,6 +48,7 @@ public class HandGrab : MonoBehaviour
         Debug.DrawRay(raycastObject.transform.position, fwd * 20, Color.green);
         if (objectHit.collider != null)
         {
+            AudioManager.Instance.PlaySound("repairInProgress");
             print("dropped down " + gameObject.GetComponentInChildren<StepObject>().name);
             ActiveRecipesHandler.Instance.InteractionHappened(gameObject.GetComponentInChildren<StepObject>());
             print("Succesfully dropped down");
@@ -54,6 +56,7 @@ public class HandGrab : MonoBehaviour
         }
         else
         {
+            AudioManager.Instance.PlaySound("dropEffect");
             print("Unsuccesfully dropped down");
         }
         if(gameObject.GetComponentInChildren<StepObject>() != null)
