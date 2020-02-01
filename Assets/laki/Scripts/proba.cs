@@ -6,9 +6,11 @@ public class proba : MonoBehaviour
 {
     bool triggerAlert=true;
     AudioManager audioManager;
+
     public bool OnStart()
     {
         audioManager.PlaySound("startOfDaySound");
+        audioManager.PlaySound("backgroundSound");
         return false;        
     }
     private void Start() {
@@ -18,10 +20,6 @@ public class proba : MonoBehaviour
     }   
     void Update()
     {
-        if(Input.GetKey("c")){
-            triggerAlert=false;
-            audioManager.PlaySound("pickEffect");
-        }
         if(Timer.Instance.TimerAlert()){
             if(triggerAlert){
                 triggerAlert=false;

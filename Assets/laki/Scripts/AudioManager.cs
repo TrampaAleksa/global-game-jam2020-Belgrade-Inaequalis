@@ -13,6 +13,7 @@ public class AudioManager : MonoBehaviour
         public AudioSource link;
         public bool loop;
         public int volume;
+        public bool pause=false;
     }
     public Audio[] audioArray;
     public static AudioManager Instance;
@@ -62,6 +63,32 @@ public class AudioManager : MonoBehaviour
             {
                 audio.link.loop=b;
             }
+        }
+    }
+    public void PauseUnPause(string name)
+    {
+        foreach(Audio audio in audioArray)
+        {
+            if(audio.tag==name)
+            {
+                CheckForPause(audio);
+            }
+            if("all"==name)
+            {
+                CheckForPause(audio);
+            }
+        }
+    }
+    private void CheckForPause(Audio audio)
+    {
+        if(!audio.pause)
+        {
+            audio.link.Pause();
+            audio.pause=true;
+        }
+        else{
+            audio.link.UnPause();
+            audio.pause=false;
         }
     }
 }

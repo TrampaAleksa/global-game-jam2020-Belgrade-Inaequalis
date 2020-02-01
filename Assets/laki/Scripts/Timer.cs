@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
@@ -18,11 +19,6 @@ public class Timer : MonoBehaviour
     int totalSeconds = 0;
     int TOTAL_SECONDS = 0;
     float fillamount;
-    public bool OnStart()
-    {
-        AudioManager.Instance.PlaySound("startOfDaySound");
-        return false;        
-    }
     public bool TimerClock()
     {
         if (sec > 0)
@@ -57,8 +53,6 @@ public class Timer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        LoopsHandler.LoopDelegate onStartDelegate = OnStart;
-        LoopsHandler.Instance.Loop(0.001f, OnStart);
         tmp=true;
         if (minutes > 0)
             totalSeconds += minutes * 60;
@@ -80,6 +74,7 @@ public class Timer : MonoBehaviour
     {
         if (sec == 0 && minutes == 0)
         {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             return false;
         }
         else return true;        
