@@ -5,44 +5,57 @@ using UnityEngine;
 public class ActiveRecipesHandler : MonoBehaviour
 {
     public static ActiveRecipesHandler Instance;
-    private int currentQueueIndex = 0;
 
+    public Recipe[] activeRecipes;
+    public Recipe[] activeRecipesClones;
+    public Recipe[] recipesForQueueing;
+
+    private Queue<Recipe> recipesQueue;
     void Awake()
     {
-        Instance = this;
+          Instance = this;
+
           activeRecipesClones = new Recipe[activeRecipes.Length];
           for(int i=0; i<activeRecipes.Length; i++){
               activeRecipesClones[i] = CloneRecipe(activeRecipes[i]);
-            print("cloned " + i);
-        }
+          }
+        recipesQueue = new Queue<Recipe>();
+        RandomizeArray.Randomize<Recipe>(recipesForQueueing);
+        AddNewRecepiesToQueue();
     }
-   
-    public Recipe[] activeRecipes;
-    public Recipe[] activeRecipesClones;
-    public Recipe[] recepiesQueue;
 
     public void AddNewRecepiesToQueue(){
-
+        RandomizeArray.Randomize<Recipe>(recipesForQueueing);
+        foreach (var recipe in recipesForQueueing)
+        {
+            recipesQueue.Enqueue(recipe);
+        }
     }
 
     public void InteractionHappened(StepObject obj){
-        for(int i =0; i< activeRecipes.Length; i++)
+        for(int i = 0; i< activeRecipes.Length; i++)
         {
             Recipe currentRecipe = activeRecipesClones[i];
-            print(currentRecipe.steps[currentRecipe.currentStep-1].currentStepObjectIndex);
-            bool currentRecipeStepSuccessful = StepHandler.Instance.PlacedStepObject(obj, currentRecipe.steps[currentRecipe.currentStep - 1]);
-            if (currentRecipe.steps[currentRecipe.currentStep-1].isFinished) {
+            Step currentRecipeStep = currentRecipe.steps[currentRecipe.currentStep - 1];
+
+            bool currentRecipeStepSuccessful =
+                StepHandler.Instance.PlacedStepObjectSuccesfully
+                (obj, currentRecipeStep);
+
+            if (currentRecipe.isFinished) {
                 print("swapping");
-                   SwapWithNew(i, recepiesQueue[currentQueueIndex]);
-                   currentQueueIndex++;
-           }
+                   SwapWithNew(i);
+            }
             if (currentRecipeStepSuccessful) currentRecipe.currentStep++;
         }
     }
 
-    public Recipe SwapWithNew(int activeRecepiesIndex, Recipe newRecipe){
-        print("swapped " + activeRecipesClones[activeRecepiesIndex].name + " with : " + CloneRecipe(newRecipe).name);
-        activeRecipesClones[activeRecepiesIndex] = CloneRecipe(newRecipe);
+    public Recipe SwapWithNew(int activeRecepiesIndex){
+        if(recipesQueue.Count < 2)
+        {
+            AddNewRecepiesToQueue();
+        }
+        activeRecipesClones[activeRecepiesIndex] = CloneRecipe(recipesQueue.Dequeue());
         return activeRecipesClones[activeRecepiesIndex];             
     }
 

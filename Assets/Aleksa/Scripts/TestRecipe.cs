@@ -13,9 +13,9 @@ public class TestRecipe : MonoBehaviour
         StepObject obj3 = GameObject.Find("Hairdrier").GetComponent<StepObject>();
 
 
-        StepHandler.Instance.PlacedStepObject(obj, testRecipe.firstStep);
-        StepHandler.Instance.PlacedStepObject(obj2, testRecipe.firstStep);
-        StepHandler.Instance.PlacedStepObject(obj3, testRecipe.firstStep);
+        StepHandler.Instance.PlacedStepObjectSuccesfully(obj, testRecipe.firstStep);
+        StepHandler.Instance.PlacedStepObjectSuccesfully(obj2, testRecipe.firstStep);
+        StepHandler.Instance.PlacedStepObjectSuccesfully(obj3, testRecipe.firstStep);
 
     }
 

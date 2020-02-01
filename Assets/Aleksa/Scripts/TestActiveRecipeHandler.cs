@@ -11,6 +11,13 @@ public class TestActiveRecipeHandler : MonoBehaviour
         ActiveRecipesHandler.Instance.InteractionHappened(FindObject("Screwdriver"));
         ActiveRecipesHandler.Instance.InteractionHappened(FindObject("Wire"));
         ActiveRecipesHandler.Instance.InteractionHappened(FindObject("Hairdrier"));
+        ActiveRecipesHandler.Instance.InteractionHappened(FindObject("Sodder"));
+        ActiveRecipesHandler.Instance.InteractionHappened(FindObject("Hairdrier"));
+        ActiveRecipesHandler.Instance.InteractionHappened(FindObject("Screw"));
+        ActiveRecipesHandler.Instance.InteractionHappened(FindObject("Screwdriver"));
+        ActiveRecipesHandler.Instance.InteractionHappened(FindObject("Hairdrier"));
+
+
     }
 
     public StepObject FindObject(string name){

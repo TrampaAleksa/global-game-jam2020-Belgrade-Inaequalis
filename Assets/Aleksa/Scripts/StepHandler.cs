@@ -10,21 +10,20 @@ public class StepHandler : MonoBehaviour
     {
         Instance = this;
     }
-    public bool PlacedStepObject(StepObject objectPlaced, Step step){
-                if(objectPlaced.gameObject.name == step.stepObjects[step.currentStepObjectIndex].name){
+    public bool PlacedStepObjectSuccesfully(StepObject objectPlaced, Step step){
+        if(objectPlaced.gameObject.name == step.stepObjects[step.currentStepObjectIndex].name){
             step.currentStepObjectIndex++;
             if(step.currentStepObjectIndex == step.stepObjects.Length) return FinishStep(step);
             else print("Correct object added, add the next one!");
         }
         else {
-            print("Wrong object added, please try again: ");
             step.currentStepObjectIndex = 0;
         }
             return false;
     }
 
     public bool FinishStep(Step step){
-        print("Finished making the item");
+        print("Finished the step");
         step.isFinished = true;
         return true;
     }

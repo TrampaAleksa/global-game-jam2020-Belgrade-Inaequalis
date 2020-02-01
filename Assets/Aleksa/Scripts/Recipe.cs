@@ -13,6 +13,7 @@ public class Recipe : ScriptableObject
 
     public Step[] steps;
     public int currentStep = 1;
+    public bool isFinished;
 
 
 }
