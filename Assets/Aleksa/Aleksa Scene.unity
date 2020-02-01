@@ -440,11 +440,12 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  recepiesQueue:
-  - {fileID: 11400000, guid: 8102d83a8892e99428698fd4f9173728, type: 2}
+  recipesForQueueing:
   - {fileID: 11400000, guid: 62ae33efaaf3d2f42a4210d95ec15bfe, type: 2}
+  - {fileID: 11400000, guid: 3521e32f5c6bcfc4c839f731fccb0fb3, type: 2}
+  - {fileID: 11400000, guid: 43af27473d0d6ba4ea289fac0eebdfa9, type: 2}
   - {fileID: 11400000, guid: d09c4b30ecad18c46aa4452810484748, type: 2}
-  - {fileID: 11400000, guid: 652c303c062d06d46befe1adfed6564b, type: 2}
+  - {fileID: 11400000, guid: 8102d83a8892e99428698fd4f9173728, type: 2}
 --- !u!114 &1543015091
 MonoBehaviour:
   m_ObjectHideFlags: 0
