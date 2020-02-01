@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05f7651ca01ee3342a01758b7b8efa4f, type: 3}
+  m_Name: Camera Step 3
+  m_EditorClassIdentifier: 
+  stepObjects:
+  - {fileID: 5551421695177392894, guid: 225618f26f0a19d4eaa13801b0fbe5eb, type: 3}
+  - {fileID: 3375953571965706980, guid: a6dcfe20949e1e946b57a43db1935d51, type: 3}
+  - {fileID: 5820710179873963980, guid: 3f7ef34d69a9e404daf2585dab57857c, type: 3}
+  currentStepObjectIndex: 0
+  isFinished: 0

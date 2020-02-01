@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05f7651ca01ee3342a01758b7b8efa4f, type: 3}
+  m_Name: Monitor Step 3
+  m_EditorClassIdentifier: 
+  stepObjects:
+  - {fileID: 3793782435911882477, guid: 14677e370a68edc4392f8211ba57b5c9, type: 3}
+  - {fileID: 7378280876153038053, guid: 19813bca0b9859a4e95556ec2076f681, type: 3}
+  - {fileID: 5856557280469390159, guid: c181516fb3baab849a1d141f1cd94337, type: 3}
+  currentStepObjectIndex: 0
+  isFinished: 0
