@@ -6,7 +6,9 @@ public class leftHandGrab : MonoBehaviour
 {
     public Sprite Grabb;
     public Sprite Normal;
-    bool grabHold = false;
+    public bool grabHold = false;
+    private Collider2D coly=null;
+
     // Update is called once per frame
     void Update()
     {
@@ -14,41 +16,33 @@ public class leftHandGrab : MonoBehaviour
         {
             this.gameObject.GetComponent<SpriteRenderer>().sprite = Grabb;
             grabHold = true;
-            print(grabHold);
-
         }
         else
         {
             this.gameObject.GetComponent<SpriteRenderer>().sprite = Normal;
             grabHold = false;
-
-            print(grabHold);
         }
 
+        if (grabHold == false)
+        {
+          
+            coly.transform.parent = null;  //baca gresku, Object reference is not an instane of an object
+            coly = null;
+        }
+      
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        while(other.tag == "item" && grabHold==true)
+        print("test1");
+        coly = other;
+        if (coly.tag == "item" && grabHold == true)
         {
-            other.transform.parent = this.gameObject.transform;
-            if (grabHold == false)
-            {
-                other.transform.parent = null;
-                break;
-            }
+            print("test2");
+            coly.transform.parent = this.gameObject.transform;
         }
-        {
 
-        }
-        
-    }
-
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.tag == "item" && this.gameObject.GetComponent<SpriteRenderer>().sprite != Grabb)
-        {
-            other.transform.parent = null;
-        }
     }
 }
+        
+  
