@@ -95,3 +95,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   brokenImage: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   fixedImage: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  titleImage: {fileID: 21300000, guid: 0fc18d6eb6f6c4f49bd584dcdad1df06, type: 3}

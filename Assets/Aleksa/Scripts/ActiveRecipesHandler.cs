@@ -23,6 +23,10 @@ public class ActiveRecipesHandler : MonoBehaviour
         RandomizeArray.Randomize<Recipe>(recipesForQueueing);
         AddNewRecepiesToQueue();
     }
+    private void Start()
+    {
+        RecipeTemplateHandler.Instance.RefreshTemplates(activeRecipes);
+    }
 
     public void AddNewRecepiesToQueue(){
         RandomizeArray.Randomize<Recipe>(recipesForQueueing);
@@ -42,11 +46,14 @@ public class ActiveRecipesHandler : MonoBehaviour
                 StepHandler.Instance.PlacedStepObjectSuccesfully
                 (obj, currentRecipeStep);
 
+            if (currentRecipeStepSuccessful) currentRecipe.currentStep++;
+            if (currentRecipe.currentStep >= currentRecipe.steps.Length)
+                currentRecipe.isFinished = true;
+
             if (currentRecipe.isFinished) {
                 print("swapping");
                    SwapWithNew(i);
             }
-            if (currentRecipeStepSuccessful) currentRecipe.currentStep++;
         }
     }
 
@@ -56,6 +63,8 @@ public class ActiveRecipesHandler : MonoBehaviour
             AddNewRecepiesToQueue();
         }
         activeRecipesClones[activeRecepiesIndex] = CloneRecipe(recipesQueue.Dequeue());
+        RecipeTemplateHandler.Instance.PutRecipeInTemplate
+            (activeRecipesClones[activeRecepiesIndex], activeRecepiesIndex);
         return activeRecipesClones[activeRecepiesIndex];             
     }
 
