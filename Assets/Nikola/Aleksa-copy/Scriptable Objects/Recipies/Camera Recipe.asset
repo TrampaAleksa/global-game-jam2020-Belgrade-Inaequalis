@@ -15,6 +15,6 @@ MonoBehaviour:
   partToRepair: {fileID: 5820710179873963980, guid: 4ad3b021768c3d84eae0bfbe180ad054,
     type: 3}
   recipeTitle: Camera
-  firstStep: {fileID: 0}
-  secondStep: {fileID: 0}
-  ThirdStep: {fileID: 0}
+  firstStep: {fileID: 11400000, guid: 310ae51622fa9fb4e8c193c6433ba393, type: 2}
+  secondStep: {fileID: 11400000, guid: c90eb98c068759d41925e537e24dcd92, type: 2}
+  ThirdStep: {fileID: 11400000, guid: 1909991428716114e82eefaa0740a671, type: 2}

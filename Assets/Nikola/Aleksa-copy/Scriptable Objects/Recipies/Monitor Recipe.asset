@@ -15,6 +15,6 @@ MonoBehaviour:
   partToRepair: {fileID: 5856557280469390159, guid: 17c9f9a4109a1484d832fdfde9e7afbd,
     type: 3}
   recipeTitle: Monitor
-  firstStep: {fileID: 0}
-  secondStep: {fileID: 0}
-  ThirdStep: {fileID: 0}
+  firstStep: {fileID: 11400000, guid: e09549d805b3218439e2e0680f0fc3b8, type: 2}
+  secondStep: {fileID: 11400000, guid: ca8671d5d18ac044094767e36ee8cffd, type: 2}
+  ThirdStep: {fileID: 11400000, guid: ae5a0f98187cec347a4ff4aaa7a0d2fe, type: 2}
