@@ -13,6 +13,7 @@ public class ActiveRecipesHandler : MonoBehaviour
           activeRecipesClones = new Recipe[activeRecipes.Length];
           for(int i=0; i<activeRecipes.Length; i++){
               activeRecipesClones[i] = CloneRecipe(activeRecipes[i]);
+            print("cloned " + i);
         }
     }
    
@@ -30,19 +31,19 @@ public class ActiveRecipesHandler : MonoBehaviour
             Recipe currentRecipe = activeRecipesClones[i];
             print(currentRecipe.steps[currentRecipe.currentStep-1].currentStepObjectIndex);
             bool currentRecipeStepSuccessful = StepHandler.Instance.PlacedStepObject(obj, currentRecipe.steps[currentRecipe.currentStep - 1]);
-            if (currentRecipeStepSuccessful) {
-               currentRecipe.currentStep++;
-               if(currentRecipe.currentStep == 4){
+            if (currentRecipe.steps[currentRecipe.currentStep-1].isFinished) {
+                print("swapping");
                    SwapWithNew(i, recepiesQueue[currentQueueIndex]);
                    currentQueueIndex++;
-               }
            }
+            if (currentRecipeStepSuccessful) currentRecipe.currentStep++;
         }
     }
 
     public Recipe SwapWithNew(int activeRecepiesIndex, Recipe newRecipe){
-        activeRecipes[activeRecepiesIndex] = newRecipe;
-        return newRecipe;
+        print("swapped " + activeRecipesClones[activeRecepiesIndex].name + " with : " + CloneRecipe(newRecipe).name);
+        activeRecipesClones[activeRecepiesIndex] = CloneRecipe(newRecipe);
+        return activeRecipesClones[activeRecepiesIndex];             
     }
 
     public Recipe CloneRecipe(Recipe recipeToClone){

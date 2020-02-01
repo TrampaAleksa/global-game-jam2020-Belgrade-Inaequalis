@@ -12,7 +12,7 @@ public class Recipe : ScriptableObject
     public Step ThirdStep;
 
     public Step[] steps;
-    public int currentStep;
+    public int currentStep = 1;
 
 
 }
