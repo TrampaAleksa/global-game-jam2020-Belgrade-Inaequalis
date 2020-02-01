@@ -49,5 +49,25 @@ public class AudioManager : MonoBehaviour
             }
         }
     }
+    public void StopSound(string name)
+    {
+        foreach(Audio audio in audioArray)
+        {
+            if(audio.tag==name)
+            {
+                audio.link.Stop();
+            }
+        }
+    }
+    public void LoopSound(string name, bool b)
+    {
+        foreach(Audio audio in audioArray)
+        {
+            if(audio.tag==name)
+            {
+                audio.link.loop=b;
+            }
+        }
+    }
 }
 
