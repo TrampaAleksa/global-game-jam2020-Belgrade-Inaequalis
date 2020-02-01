@@ -5,14 +5,20 @@ using UnityEngine;
 public class ActiveRecipesHandler : MonoBehaviour
 {
     public static ActiveRecipesHandler Instance;
+    private int currentQueueIndex = 0;
 
     void Awake()
     {
         Instance = this;
+          activeRecipesClones = new Recipe[activeRecipes.Length];
+          for(int i=0; i<activeRecipes.Length; i++){
+              activeRecipesClones[i] = CloneRecipe(activeRecipes[i]);
+        }
     }
    
     public Recipe[] activeRecipes;
-    public Queue<Recipe> recepiesQueue;
+    public Recipe[] activeRecipesClones;
+    public Recipe[] recepiesQueue;
 
     public void AddNewRecepiesToQueue(){
 
@@ -21,12 +27,14 @@ public class ActiveRecipesHandler : MonoBehaviour
     public void InteractionHappened(StepObject obj){
         for(int i =0; i< activeRecipes.Length; i++)
         {
-            Recipe currentRecipe = activeRecipes[i];
+            Recipe currentRecipe = activeRecipesClones[i];
+            print(currentRecipe.steps[currentRecipe.currentStep-1].currentStepObjectIndex);
             bool currentRecipeStepSuccessful = StepHandler.Instance.PlacedStepObject(obj, currentRecipe.steps[currentRecipe.currentStep - 1]);
             if (currentRecipeStepSuccessful) {
                currentRecipe.currentStep++;
                if(currentRecipe.currentStep == 4){
-                   SwapWithNew(i, recepiesQueue.Dequeue());
+                   SwapWithNew(i, recepiesQueue[currentQueueIndex]);
+                   currentQueueIndex++;
                }
            }
         }
@@ -34,6 +42,14 @@ public class ActiveRecipesHandler : MonoBehaviour
 
     public Recipe SwapWithNew(int activeRecepiesIndex, Recipe newRecipe){
         activeRecipes[activeRecepiesIndex] = newRecipe;
+        return newRecipe;
+    }
+
+    public Recipe CloneRecipe(Recipe recipeToClone){
+        Recipe newRecipe = Instantiate(recipeToClone);
+        for(int i=0; i<activeRecipes.Length; i++){
+        newRecipe.steps[i] = Instantiate(newRecipe.steps[i]);
+        }
         return newRecipe;
     }
 }

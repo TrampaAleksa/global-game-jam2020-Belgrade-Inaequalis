@@ -18,3 +18,8 @@ MonoBehaviour:
   firstStep: {fileID: 11400000, guid: 7d12018a51dc66f4387b419ee75ca1f3, type: 2}
   secondStep: {fileID: 11400000, guid: 0f4881d93b2f6684b94cc93cb08796eb, type: 2}
   ThirdStep: {fileID: 11400000, guid: 56d82dd8bcfe1c74cb48cb3e34d1d011, type: 2}
+  steps:
+  - {fileID: 11400000, guid: 7d12018a51dc66f4387b419ee75ca1f3, type: 2}
+  - {fileID: 11400000, guid: 0f4881d93b2f6684b94cc93cb08796eb, type: 2}
+  - {fileID: 11400000, guid: 56d82dd8bcfe1c74cb48cb3e34d1d011, type: 2}
+  currentStep: 1

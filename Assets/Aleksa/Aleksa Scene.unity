@@ -338,6 +338,7 @@ GameObject:
   - component: {fileID: 1543015089}
   - component: {fileID: 1543015088}
   - component: {fileID: 1543015090}
+  - component: {fileID: 1543015091}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -428,10 +429,30 @@ MonoBehaviour:
   m_GameObject: {fileID: 1543015087}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27e10c092a3e6b24aa2bb3d23ffeb071, type: 3}
+  m_Script: {fileID: 11500000, guid: 3c3bcc7ff6fec4c43a4865b0937475c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  testRecipe: {fileID: 11400000, guid: 652c303c062d06d46befe1adfed6564b, type: 2}
+  activeRecipes:
+  - {fileID: 11400000, guid: 652c303c062d06d46befe1adfed6564b, type: 2}
+  - {fileID: 11400000, guid: 652c303c062d06d46befe1adfed6564b, type: 2}
+  - {fileID: 11400000, guid: 652c303c062d06d46befe1adfed6564b, type: 2}
+  recepiesQueue:
+  - {fileID: 11400000, guid: 652c303c062d06d46befe1adfed6564b, type: 2}
+  - {fileID: 11400000, guid: 652c303c062d06d46befe1adfed6564b, type: 2}
+  - {fileID: 11400000, guid: 652c303c062d06d46befe1adfed6564b, type: 2}
+  - {fileID: 11400000, guid: 652c303c062d06d46befe1adfed6564b, type: 2}
+--- !u!114 &1543015091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1543015087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c913b4b8c8f9530418ace235083d8a11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1585180750 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8220627825427775940, guid: e07e8af70b0616945bc098596312fd8b,
