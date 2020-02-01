@@ -5,5 +5,11 @@ using UnityEngine.UI;
 
 public class RepairComponent : StepObject
 {
-   public Image image;
+   public Sprite image;
+
+   
+   void Start()
+   {
+       image = gameObject.GetComponent<SpriteRenderer>().sprite;
+   }
 }

@@ -5,6 +5,6 @@ using UnityEngine.UI;
 
 public class Part : StepObject
 {
-   public Image brokenImage;
-   public Image fixedImage;
+   public Sprite brokenImage;
+   public Sprite fixedImage;
 }

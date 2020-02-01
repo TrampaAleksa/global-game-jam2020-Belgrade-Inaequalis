@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Recipe", menuName = "ScriptableObjects")]
+[CreateAssetMenu(fileName = "Recipe", menuName = "ScriptableObjects/recipe")]
 public class Recipe : ScriptableObject
 {
     public Part partToRepair;

@@ -25,6 +25,7 @@ public class StepHandler : MonoBehaviour
     }
 
     public void FinishStep(Step step){
+        print("Finished making the item");
         step.isFinished = true;
     }
 }

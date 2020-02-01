@@ -6,10 +6,10 @@ using UnityEngine.UI;
 public class Machine : StepObject
 {
    public float workTime;
-   public Image turnedOffImage;
-   public Image turnedOnImage;
+   public Sprite turnedOffImage;
+   public Sprite turnedOnImage;
 
-   private Image currentImage;
+   private Sprite currentImage;
    public bool isTurnedOn = false;
 
    void Start()
