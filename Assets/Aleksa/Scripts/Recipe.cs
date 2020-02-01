@@ -11,4 +11,8 @@ public class Recipe : ScriptableObject
     public Step secondStep;
     public Step ThirdStep;
 
+    public Step[] steps;
+    public int currentStep;
+
+
 }
