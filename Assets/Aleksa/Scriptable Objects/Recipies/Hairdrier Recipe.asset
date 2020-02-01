@@ -15,6 +15,6 @@ MonoBehaviour:
   partToRepair: {fileID: 6587524950776181380, guid: 2197b1a00ef2657499b06224c6b747ab,
     type: 3}
   recipeTitle: Hairdrier
-  firstStep: {fileID: 0}
-  secondStep: {fileID: 0}
-  ThirdStep: {fileID: 0}
+  firstStep: {fileID: 11400000, guid: 7d12018a51dc66f4387b419ee75ca1f3, type: 2}
+  secondStep: {fileID: 11400000, guid: 0f4881d93b2f6684b94cc93cb08796eb, type: 2}
+  ThirdStep: {fileID: 11400000, guid: 56d82dd8bcfe1c74cb48cb3e34d1d011, type: 2}

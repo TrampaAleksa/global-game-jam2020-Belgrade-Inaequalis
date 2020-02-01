@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Hairdrier Step 3
   m_EditorClassIdentifier: 
   stepObjects:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 698228220403207817, guid: f1738ebab0b83814c814508c59bd4853, type: 3}
+  - {fileID: 7378280876153038053, guid: 5d21c09f559cbb442a8fb1e3d2d62b21, type: 3}
+  - {fileID: 6587524950776181380, guid: 2197b1a00ef2657499b06224c6b747ab, type: 3}
   currentStepObjectIndex: 0
   isFinished: 0
