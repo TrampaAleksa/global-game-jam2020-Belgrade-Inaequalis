@@ -5,7 +5,6 @@ using UnityEngine;
 public class proba : MonoBehaviour
 {
     AudioManager audioManager;
-
     void Start()
     {
         audioManager=AudioManager.Instance;
