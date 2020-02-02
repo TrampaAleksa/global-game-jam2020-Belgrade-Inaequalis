@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Nikola/startMenu.unity
+    guid: a8ef38eb77081774c8c3b23bfe43023f
+  - enabled: 1
+    path: Assets/FINAL/Scenes/Main.unity
+    guid: 919faea5a06c1a947b30e7272bf48e55
   m_configObjects: {}
