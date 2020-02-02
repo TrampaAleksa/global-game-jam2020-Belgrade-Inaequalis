@@ -73,6 +73,7 @@ public class ActiveRecipesHandler : MonoBehaviour
         RecipeTemplateHandler.Instance.PutRecipeInTemplate
             (activeRecipesClones[activeRecepiesIndex], activeRecepiesIndex);
         Destroy(objectToSwapWith);
+        RecipeTemplateHandler.Instance.stepAnimators[activeRecepiesIndex].ResetStepsAnimations();
         Spawner.Instance.SpawnNewItem(activeRecipesClones[activeRecepiesIndex].partToRepair.gameObject, activeRecepiesIndex);
         return activeRecipesClones[activeRecepiesIndex];             
     }
