@@ -11,20 +11,16 @@ public class AudioManager : MonoBehaviour
         public string tag;
         public AudioClip clip;
         public AudioSource link;
-        public bool playOnAwake;
         public bool loop;
         public int volume;
     }
+    public Audio[] audioArray;
     public static AudioManager Instance;
-    void Awake()
-    {
+    private void Awake() {
         Instance = this;
     }
-    public Audio[] audioArray;
-
     void Start()
     {
-        
         int i = 0;
         AudioSource[] audioSource = new AudioSource[audioArray.Length];
         foreach (Audio audio in audioArray)
@@ -34,7 +30,6 @@ public class AudioManager : MonoBehaviour
             audioSource[i].clip = audio.clip;
             audioSource[i].volume = audio.volume;
             audioSource[i].loop = audio.loop;
-            audioSource[i].playOnAwake = audio.playOnAwake;
             audio.link = audioSource[i];
             i++;
         }
