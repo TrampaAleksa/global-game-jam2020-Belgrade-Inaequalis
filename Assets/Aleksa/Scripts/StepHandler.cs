@@ -29,6 +29,7 @@ public class StepHandler : MonoBehaviour
 
     public bool FinishStep(Step step){
         print("Finished the step");
+        step.currentStepObjectIndex = 0;
         step.isFinished = true;
         return true;
     }

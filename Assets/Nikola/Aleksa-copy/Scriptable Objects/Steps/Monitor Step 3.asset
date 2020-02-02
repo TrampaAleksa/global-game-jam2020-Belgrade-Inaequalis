@@ -17,4 +17,4 @@ MonoBehaviour:
   - {fileID: 7378280876153038053, guid: 5d21c09f559cbb442a8fb1e3d2d62b21, type: 3}
   - {fileID: 5694701448916556614, guid: 61a529e625f98b547a4b99a2a40ad897, type: 3}
   currentStepObjectIndex: 0
-  isFinished: 0
+  isFinished: 1

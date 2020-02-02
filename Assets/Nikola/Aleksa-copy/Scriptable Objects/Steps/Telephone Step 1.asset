@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Telephone Step 1
   m_EditorClassIdentifier: 
   stepObjects:
-  - {fileID: 628920434148932289, guid: 49c7d70457f4ce6428d08d1963cc7866, type: 3}
-  - {fileID: 3375953571965706980, guid: a6dcfe20949e1e946b57a43db1935d51, type: 3}
+  - {fileID: 628920434148932289, guid: 3dbce7cb7cfcf5c4d8cc183f61dc1a21, type: 3}
+  - {fileID: 3375953571965706980, guid: 2b97306726002454da340cb4387da0f0, type: 3}
   - {fileID: 1584258347674071310, guid: 0c406d3bed57c094fb0ab437fc87ebce, type: 3}
   currentStepObjectIndex: 0
   isFinished: 0

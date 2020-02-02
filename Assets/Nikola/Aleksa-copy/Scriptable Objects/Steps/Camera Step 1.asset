@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Camera Step 1
   m_EditorClassIdentifier: 
   stepObjects:
-  - {fileID: 7378280876153038053, guid: 19813bca0b9859a4e95556ec2076f681, type: 3}
-  - {fileID: 698228220403207817, guid: eca39e07c5af8ce41bab8af9536c6397, type: 3}
+  - {fileID: 7378280876153038053, guid: 5d21c09f559cbb442a8fb1e3d2d62b21, type: 3}
+  - {fileID: 698228220403207817, guid: f1738ebab0b83814c814508c59bd4853, type: 3}
   - {fileID: 5065657344979994145, guid: 2a22899f0ba638a4c918af9d285bb723, type: 3}
   currentStepObjectIndex: 0
   isFinished: 0

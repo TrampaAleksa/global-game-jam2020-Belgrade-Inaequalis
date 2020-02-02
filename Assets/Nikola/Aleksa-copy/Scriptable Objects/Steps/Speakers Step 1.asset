@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Speakers Step 1
   m_EditorClassIdentifier: 
   stepObjects:
-  - {fileID: 628920434148932289, guid: 49c7d70457f4ce6428d08d1963cc7866, type: 3}
-  - {fileID: 7378280876153038053, guid: 19813bca0b9859a4e95556ec2076f681, type: 3}
+  - {fileID: 628920434148932289, guid: 3dbce7cb7cfcf5c4d8cc183f61dc1a21, type: 3}
+  - {fileID: 7378280876153038053, guid: 5d21c09f559cbb442a8fb1e3d2d62b21, type: 3}
   - {fileID: 6122147479352761547, guid: a5cbbbd202f9c9e469b405e36fffa0a0, type: 3}
   currentStepObjectIndex: 0
   isFinished: 0
