@@ -12,6 +12,11 @@ public class RecipeTemplateHandler : MonoBehaviour
         Instance = this;
     }
 
+    private void Start()
+    {
+        
+    }
+
     public void PutRecipeInTemplate(Recipe recipeToPut, int indexInCanvas)
     {
         RecipeTemplate selectedRecipeTemplate = recipeTemplatesInCanvas[indexInCanvas];
@@ -19,10 +24,11 @@ public class RecipeTemplateHandler : MonoBehaviour
         selectedRecipeTemplate.title.text.sprite = recipeToPut.partToRepair.titleImage;
 
         int i = 0;
-        foreach (var step in selectedRecipeTemplate.steps)
+        foreach (var step in recipeToPut.steps)
         {
             foreach (var stepObject in step.stepObjects)
             {
+                print(stepObject.GetDefaultImage().name);
                 selectedRecipeTemplate.stepImages[i].sprite = stepObject.GetDefaultImage();
                 i++;
             }

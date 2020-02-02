@@ -25,7 +25,7 @@ public class ActiveRecipesHandler : MonoBehaviour
     }
     private void Start()
     {
-        RecipeTemplateHandler.Instance.RefreshTemplates(activeRecipes);
+        RecipeTemplateHandler.Instance.RefreshTemplates(activeRecipesClones);
         Spawner.Instance.SpawnNewItem(activeRecipesClones[0].partToRepair.gameObject, 0 );
         Spawner.Instance.SpawnNewItem(activeRecipesClones[1].partToRepair.gameObject, 1);
     }
