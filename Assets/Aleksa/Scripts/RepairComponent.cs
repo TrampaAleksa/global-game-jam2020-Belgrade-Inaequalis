@@ -7,8 +7,12 @@ public class RepairComponent : StepObject
 {
    public Sprite image;
 
-   
-   void Start()
+    public override Sprite GetDefaultImage()
+    {
+        return image;
+    }
+
+    void Start()
    {
        image = gameObject.GetComponent<SpriteRenderer>().sprite;
    }

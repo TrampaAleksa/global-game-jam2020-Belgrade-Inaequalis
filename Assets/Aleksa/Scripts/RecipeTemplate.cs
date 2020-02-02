@@ -16,4 +16,5 @@ public class RecipeTemplate : MonoBehaviour
 {
     public Title title;
     public Step[] steps;
+    public Image[] stepImages;
 }

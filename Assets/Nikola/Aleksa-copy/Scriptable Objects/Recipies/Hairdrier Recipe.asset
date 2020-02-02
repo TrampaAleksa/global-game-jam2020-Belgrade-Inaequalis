@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62bb2a99f6980364f961e2fac4b3051d, type: 3}
   m_Name: Hairdrier Recipe
   m_EditorClassIdentifier: 
-  partToRepair: {fileID: 6587524950776181380, guid: 2197b1a00ef2657499b06224c6b747ab,
+  partToRepair: {fileID: 8565916067542606546, guid: cb827283bef5a4c4584772cbdf60f6c4,
     type: 3}
   recipeTitle: Hairdrier
   firstStep: {fileID: 11400000, guid: 7d12018a51dc66f4387b419ee75ca1f3, type: 2}
@@ -23,3 +23,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e1521748d71a4d7429a18262bb9677ed, type: 2}
   - {fileID: 11400000, guid: 9dce6e07d79a9ad419e3201861abff9e, type: 2}
   currentStep: 1
+  isFinished: 0

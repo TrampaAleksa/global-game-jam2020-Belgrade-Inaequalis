@@ -2,17 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StepObject : MonoBehaviour
+public abstract class StepObject : MonoBehaviour
 {
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
+    public abstract Sprite GetDefaultImage();
 
     public void Interact(){
 

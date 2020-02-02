@@ -4,70 +4,41 @@ using UnityEngine;
 
 public class rightHandGrab : MonoBehaviour
 {
-    bool par = false;
+   
 
     public Sprite Grabb;
     public Sprite Normal;
-    bool grabHold=false;
-    private Collider2D coly=null;
+    private HandGrab handGrab;
+    
+  
 
     void Awake()
     {
-        //leftHand.GetComponent<leftHandGrab>().grabHold
+    }
+
+    void Start()
+    {
+        handGrab = GetComponent<HandGrab>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey("space"))
+        if (Input.GetKeyDown("space"))
         {
             this.gameObject.GetComponent<SpriteRenderer>().sprite = Grabb;
-            grabHold = true;
-            
+            handGrab.TryGrabbing();
+
         }
-        else
+        if (Input.GetKeyUp("space"))
         {
             this.gameObject.GetComponent<SpriteRenderer>().sprite = Normal;
-            grabHold = false;
+            handGrab.ReleaseGrab();
         }
-
-        if (grabHold == false)
-        {
-            coly.transform.parent = null;  //baca gresku, Object reference is not an instane of an object
-            coly = null;
-        }
-        if (par==true)
-        {
-            if (grabHold==true)
-            {
-                coly.transform.parent = this.gameObject.transform;
-            }
-            else if (grabHold==false)
-            {
-
-            }
-            
-        }
+    }
      
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-       
-        if (other.tag == "item")
-        {
-            coly = other;
-            par = true;
-        }
-        print("ON TRIGER ENTER");
-        
-    }
-
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        par = false;
-        print("ON TRIGGER EXIT");
-    }
-
+    
    
-}
+

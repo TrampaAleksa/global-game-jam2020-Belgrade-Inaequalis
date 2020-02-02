@@ -4,45 +4,44 @@ using UnityEngine;
 
 public class leftHandGrab : MonoBehaviour
 {
+    
     public Sprite Grabb;
     public Sprite Normal;
-    public bool grabHold = false;
-    private Collider2D coly=null;
+    private HandGrab handGrab;
+
+    void Awake()
+    {
+        //leftHand.GetComponent<leftHandGrab>().grabHold
+    }
+
+    void Start()
+    {
+        handGrab = GetComponent<HandGrab>();
+    }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey("c"))
+        if (Input.GetKeyDown("c"))
         {
             this.gameObject.GetComponent<SpriteRenderer>().sprite = Grabb;
-            grabHold = true;
+            handGrab.TryGrabbing();
+
         }
-        else
+        if (Input.GetKeyUp("c"))
         {
             this.gameObject.GetComponent<SpriteRenderer>().sprite = Normal;
-            grabHold = false;
+            handGrab.ReleaseGrab();
+
         }
 
-        if (grabHold == false)
-        {
-          
-            coly.transform.parent = null;  //baca gresku, Object reference is not an instane of an object
-            coly = null;
-        }
-      
-    }
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        print("test1");
-        coly = other;
-        if (coly.tag == "item" && grabHold == true)
-        {
-            print("test2");
-            coly.transform.parent = this.gameObject.transform;
-        }
 
     }
+
+    
+
+
 }
-        
-  
+
+

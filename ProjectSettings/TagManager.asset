@@ -6,6 +6,7 @@ TagManager:
   tags:
   - hand
   - item
+  - end
   layers:
   - Default
   - TransparentFX
@@ -15,8 +16,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - Dropdown
+  - Item
   - 
   - 
   - 

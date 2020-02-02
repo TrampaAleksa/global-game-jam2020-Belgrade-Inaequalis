@@ -22,4 +22,8 @@ public class Machine : StepObject
        isTurnedOn = !isTurnedOn;
    }
 
+    public override Sprite GetDefaultImage()
+    {
+        return turnedOffImage;
+    }
 }

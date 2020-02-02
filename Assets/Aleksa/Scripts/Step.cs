@@ -6,7 +6,8 @@ using UnityEngine;
 public class Step : ScriptableObject
 {
     public StepObject[] stepObjects;
-    public int currentStepObjectIndex;
+    [SerializeField]
+    public int currentStepObjectIndex = 1;
     public bool isFinished = false;
    
 }

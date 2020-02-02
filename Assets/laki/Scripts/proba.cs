@@ -4,15 +4,30 @@ using UnityEngine;
 
 public class proba : MonoBehaviour
 {
+    bool triggerAlert=true;
     AudioManager audioManager;
-    void Start()
+    public bool OnStart()
     {
-        audioManager=AudioManager.Instance;
+        audioManager.PlaySound("startOfDaySound");
+        return false;        
     }
-    
+    private void Start() {
+        audioManager= AudioManager.Instance;
+        LoopsHandler.LoopDelegate onStartDelegate = OnStart;
+        LoopsHandler.Instance.Loop(0.001f, OnStart);
+    }   
     void Update()
     {
-        if(Input.GetKeyDown("k"))
-            audioManager.PlaySound("hammer");
+        if(Input.GetKey("c")){
+            triggerAlert=false;
+            audioManager.PlaySound("pickEffect");
+        }
+        if(Timer.Instance.TimerAlert()){
+            if(triggerAlert){
+                triggerAlert=false;
+                audioManager.PlaySound("endOfDayBell");
+            }
+        }
     }
+    
 }
