@@ -51,6 +51,7 @@ public class ActiveRecipesHandler : MonoBehaviour
 
             if (currentRecipeStepSuccessful) {
                 print("did it");
+                RecipeTemplateHandler.Instance.stepAnimators[i].SetStepIsFinished(true, currentRecipe.currentStep - 1);
             currentRecipe.currentStep++;
             }
             if (currentRecipe.currentStep > currentRecipe.steps.Length)
@@ -58,7 +59,6 @@ public class ActiveRecipesHandler : MonoBehaviour
 
             if (currentRecipe.isFinished) {
                 print("swapping");
-
                    SwapWithNew(i, obj.gameObject);
             }
         }

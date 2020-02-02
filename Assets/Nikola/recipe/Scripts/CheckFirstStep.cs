@@ -11,12 +11,13 @@ public class CheckFirstStep : MonoBehaviour
         "secondStepIsFinished",
         "thirdStepIsFinished"
     };
-    // Update is called once per frame
-    void Update()
+   
+
+    public void ResetStepsAnimations()
     {
-        SetStepIsFinished(true,0);
-        SetStepIsFinished(true,1);
-        SetStepIsFinished(true,2);
+        SetStepIsFinished(false, 0);
+        SetStepIsFinished(false, 1);
+        SetStepIsFinished(false, 2);
     }
 
     public void SetStepIsFinished(bool isFinished, int stepIndex) // Prosledi trampin isFinished flag

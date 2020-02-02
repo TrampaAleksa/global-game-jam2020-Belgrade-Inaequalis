@@ -7,6 +7,8 @@ public class RecipeTemplateHandler : MonoBehaviour
 
     public RecipeTemplate[] recipeTemplatesInCanvas;
     public static RecipeTemplateHandler Instance;
+
+    public CheckFirstStep[] stepAnimators;
     private void Awake()
     {
         Instance = this;
