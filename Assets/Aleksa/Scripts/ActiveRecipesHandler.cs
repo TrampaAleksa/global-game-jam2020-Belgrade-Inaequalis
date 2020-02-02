@@ -26,6 +26,8 @@ public class ActiveRecipesHandler : MonoBehaviour
     private void Start()
     {
         RecipeTemplateHandler.Instance.RefreshTemplates(activeRecipes);
+        Spawner.Instance.SpawnNewItem(activeRecipesClones[0].partToRepair.gameObject, 0 );
+        Spawner.Instance.SpawnNewItem(activeRecipesClones[1].partToRepair.gameObject, 1);
     }
 
     public void AddNewRecepiesToQueue(){
@@ -42,22 +44,27 @@ public class ActiveRecipesHandler : MonoBehaviour
             Recipe currentRecipe = activeRecipesClones[i];
             Step currentRecipeStep = currentRecipe.steps[currentRecipe.currentStep - 1];
 
+            print("currentRecipeStep" + currentRecipe.currentStep);
             bool currentRecipeStepSuccessful =
                 StepHandler.Instance.PlacedStepObjectSuccesfully
                 (obj, currentRecipeStep);
 
-            if (currentRecipeStepSuccessful) currentRecipe.currentStep++;
-            if (currentRecipe.currentStep >= currentRecipe.steps.Length)
+            if (currentRecipeStepSuccessful) {
+                print("did it");
+            currentRecipe.currentStep++;
+            }
+            if (currentRecipe.currentStep > currentRecipe.steps.Length)
                 currentRecipe.isFinished = true;
 
             if (currentRecipe.isFinished) {
                 print("swapping");
-                   SwapWithNew(i);
+
+                   SwapWithNew(i, obj.gameObject);
             }
         }
     }
 
-    public Recipe SwapWithNew(int activeRecepiesIndex){
+    public Recipe SwapWithNew(int activeRecepiesIndex, GameObject objectToSwapWith){
         if(recipesQueue.Count < 2)
         {
             AddNewRecepiesToQueue();
@@ -65,6 +72,8 @@ public class ActiveRecipesHandler : MonoBehaviour
         activeRecipesClones[activeRecepiesIndex] = CloneRecipe(recipesQueue.Dequeue());
         RecipeTemplateHandler.Instance.PutRecipeInTemplate
             (activeRecipesClones[activeRecepiesIndex], activeRecepiesIndex);
+        Destroy(objectToSwapWith);
+        Spawner.Instance.SpawnNewItem(activeRecipesClones[activeRecepiesIndex].partToRepair.gameObject, activeRecepiesIndex);
         return activeRecipesClones[activeRecepiesIndex];             
     }
 

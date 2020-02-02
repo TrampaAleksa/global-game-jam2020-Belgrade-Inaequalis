@@ -47,6 +47,8 @@ public class HandGrab : MonoBehaviour
         Debug.DrawRay(raycastObject.transform.position, fwd * 20, Color.green);
         if (objectHit.collider != null)
         {
+            print("dropped down " + gameObject.GetComponentInChildren<StepObject>().name);
+            ActiveRecipesHandler.Instance.InteractionHappened(gameObject.GetComponentInChildren<StepObject>());
             print("Succesfully dropped down");
             // Ovde ide kod za rad sa receptima (ActiveRecipesHandler.Instance)
         }

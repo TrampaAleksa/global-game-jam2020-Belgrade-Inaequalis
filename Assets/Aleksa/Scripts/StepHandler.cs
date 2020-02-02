@@ -11,9 +11,14 @@ public class StepHandler : MonoBehaviour
         Instance = this;
     }
     public bool PlacedStepObjectSuccesfully(StepObject objectPlaced, Step step){
-        if(objectPlaced.gameObject.name == step.stepObjects[step.currentStepObjectIndex].name){
+        print(step.currentStepObjectIndex);
+        if(objectPlaced.gameObject.GetComponent<StepObject>().GetDefaultImage() == step.stepObjects[step.currentStepObjectIndex].GetComponent<StepObject>().GetDefaultImage())
+        {
             step.currentStepObjectIndex++;
-            if(step.currentStepObjectIndex == step.stepObjects.Length) return FinishStep(step);
+            if (step.currentStepObjectIndex == step.stepObjects.Length)
+            {
+                return FinishStep(step);
+            }
             else print("Correct object added, add the next one!");
         }
         else {
