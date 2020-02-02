@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepObjects:
   - {fileID: 2946029707939458658, guid: d96829cb59fe6c846bc562134ba31d82, type: 3}
-  - {fileID: 4941600190514693763, guid: 9fe8de145ea976d42b13457261b0d5fe, type: 3}
+  - {fileID: 1584258347674071310, guid: 0c406d3bed57c094fb0ab437fc87ebce, type: 3}
   currentStepObjectIndex: 0
   isFinished: 0

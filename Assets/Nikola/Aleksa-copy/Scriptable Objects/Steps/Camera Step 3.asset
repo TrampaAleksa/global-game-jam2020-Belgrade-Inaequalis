@@ -15,6 +15,6 @@ MonoBehaviour:
   stepObjects:
   - {fileID: 5551421695177392894, guid: 225618f26f0a19d4eaa13801b0fbe5eb, type: 3}
   - {fileID: 3375953571965706980, guid: a6dcfe20949e1e946b57a43db1935d51, type: 3}
-  - {fileID: 5820710179873963980, guid: 3f7ef34d69a9e404daf2585dab57857c, type: 3}
+  - {fileID: 5065657344979994145, guid: 2a22899f0ba638a4c918af9d285bb723, type: 3}
   currentStepObjectIndex: 0
   isFinished: 0

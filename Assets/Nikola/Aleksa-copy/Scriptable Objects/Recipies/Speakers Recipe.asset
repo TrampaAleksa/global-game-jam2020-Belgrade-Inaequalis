@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62bb2a99f6980364f961e2fac4b3051d, type: 3}
   m_Name: Speakers Recipe
   m_EditorClassIdentifier: 
-  partToRepair: {fileID: 5848278926571933870, guid: b53300fd08852ef4292a399830c7dcc3,
+  partToRepair: {fileID: 6122147479352761547, guid: a5cbbbd202f9c9e469b405e36fffa0a0,
     type: 3}
   recipeTitle: Speakers
   firstStep: {fileID: 11400000, guid: 36a6980a208a8b14f8e2d7a0dc08980b, type: 2}
@@ -23,3 +23,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6f4403ce1a0f4ef47a1b1ed60e2c035c, type: 2}
   - {fileID: 11400000, guid: 7a3ff3de1da495d48912c935fe98252c, type: 2}
   currentStep: 1
+  isFinished: 0

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62bb2a99f6980364f961e2fac4b3051d, type: 3}
   m_Name: Telephone Recipe
   m_EditorClassIdentifier: 
-  partToRepair: {fileID: 4941600190514693763, guid: 505877692af4be140b8c8b0ad2b803c2,
+  partToRepair: {fileID: 1584258347674071310, guid: 0c406d3bed57c094fb0ab437fc87ebce,
     type: 3}
   recipeTitle: Telephone
   firstStep: {fileID: 11400000, guid: 482dcb441da007744a5df7567caa5f70, type: 2}
@@ -23,3 +23,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 378052abd1204af408f54ddd3b5323b7, type: 2}
   - {fileID: 11400000, guid: f81ddf69e8f923f4e997a1f369a6fa26, type: 2}
   currentStep: 1
+  isFinished: 0

@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Monitor Step 1
   m_EditorClassIdentifier: 
   stepObjects:
-  - {fileID: 5551421695177392894, guid: 225618f26f0a19d4eaa13801b0fbe5eb, type: 3}
-  - {fileID: 7378280876153038053, guid: 19813bca0b9859a4e95556ec2076f681, type: 3}
-  - {fileID: 5856557280469390159, guid: c181516fb3baab849a1d141f1cd94337, type: 3}
+  - {fileID: 5551421695177392894, guid: 812d34c1c1c240f4d87edba3e8af9e0f, type: 3}
+  - {fileID: 7378280876153038053, guid: 5d21c09f559cbb442a8fb1e3d2d62b21, type: 3}
+  - {fileID: 5694701448916556614, guid: 61a529e625f98b547a4b99a2a40ad897, type: 3}
   currentStepObjectIndex: 0
   isFinished: 0
